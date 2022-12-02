@@ -1,5 +1,5 @@
 library(dplyr)
-df<- read.table("household_power_consumption.txt", header=TRUE, sep = ";")
+df<- read.table("household_power_consumption.txt", header=TRUE, sep = ";", na.strings = '?')
 
 ## Change the type of col 3:9 from character to numeric
 df <- df %>% mutate_at(c(3:9), as.numeric)
